@@ -8,38 +8,29 @@
 
         index++;
     }
-//     int count = 0;
-//     int max = collection[count];
-//     int min = collection[count];
-//     while (length < count)
-//     {
-//        if(collection[count] > max) max = collection[count]; 
-       
-//        if(collection[count] < min) min = collection[count]; 
-//        count +=1;
-
-
-//     }
-// Console.WriteLine(max);
-// Console.WriteLine(min);
-
-    
-   
-}  
     int count = 0;
     int max = collection[count];
     int min = collection[count];
     while (length < count)
     {
-       if(collection[count] > max) max = collection[count]; 
-       
-       if(collection[count] < min) min = collection[count]; 
-       count +=1;
+        if(collection[count] > max) 
+        {
+            max = collection[count]; 
+        }
+        if(collection[count] < min)
+        {
+            min = collection[count];
+        }  
+        count +=1;
 
-
+    Console.WriteLine(max);
+    Console.WriteLine(min);
     }
-Console.WriteLine(max);
-Console.WriteLine(min);
+
+}
+    
+   
+
 
 
 void PrintArray(int[] newCol)
