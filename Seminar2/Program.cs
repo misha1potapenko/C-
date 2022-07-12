@@ -1,73 +1,119 @@
-﻿void FillArray(int[] collection)
-{
-    int length = collection.Length;
-    int index = 0;
-    while(index < length)
-    {
-        collection[index] = new Random().Next(1, 10);
+﻿// void FillArray(int[] collection)
+// {
+//     int length = collection.Length;
+//     int index = 0;
+//     while(index < length)
+//     {
+//         collection[index] = new Random().Next(1, 10);
 
-        index++;
-    }
-    int count = 0;
-    int max = collection[count];
-    int min = collection[count];
-    while (length < count)
-    {
-        if(collection[count] > max) 
-        {
-            max = collection[count]; 
-        }
-        if(collection[count] < min)
-        {
-            min = collection[count];
-        }  
-        count +=1;
+//         index++;
+//     }
+//     int count = 0;
+//     int max = collection[count];
+//     int min = collection[count];
+//     while (length < count)
+//     {
+//         if(collection[count] > max) 
+//         {
+//             max = collection[count]; 
+//             count +=1;
+//         }
+//         if(collection[count] < min)
+//         {
+//             min = collection[count];
+//             count +=1;
+//         }  
+    
 
-    Console.WriteLine(max);
-    Console.WriteLine(min);
-    }
+//     Console.WriteLine(max);
+//     Console.WriteLine(min);
+//     }
 
-}
+// }
     
    
 
 
 
-void PrintArray(int[] newCol)
+// void PrintArray(int[] newCol)
+// {
+//     int count = newCol.Length;
+//     int position = 0;
+//     while (position < count)
+//     {
+//         Console.Write(newCol[position]);
+//         position++;
+//     }
+// }
+
+// int IndexOff(int[] collection, int find)
+// {
+//     int count = collection.Length;
+//     int index = 0;
+//     int position = -1;
+//     while(index < count)
+//     {
+//         if(collection[index] == find)
+//         {
+//             position = index;
+//             break;
+//         }
+//         index++;
+        
+//     }
+//     return position;
+// }
+
+
+// int[] massif = new int[10];
+// FillArray(massif);
+// PrintArray(massif);
+// Console.WriteLine();
+
+
+// int pos = IndexOff(massif, 5);
+// Console.WriteLine(pos);
+
+void FillArray(int[] array)
 {
-    int count = newCol.Length;
-    int position = 0;
-    while (position < count)
+    int lenght = array.Length;
+    int index = 0;
+    while (index < lenght)
     {
-        Console.Write(newCol[position]);
-        position++;
+        array[index] = new Random().Next(1, 10);
+        Console.Write(array[index]);
+        Console.Write(", ");
+        index++;
     }
 }
-
-int IndexOff(int[] collection, int find)
+void FindMaxMin(int[] list)
 {
-    int count = collection.Length;
+    int lenght = list.Length;
     int index = 0;
-    int position = -1;
-    while(index < count)
+    int max = list[0];
+    int min = list[0];
+    int indmax = 0;
+    int indmin = 0; 
+    while (index < lenght)
     {
-        if(collection[index] == find)
+        if(list[index] > max)
         {
-            position = index;
-            break;
+            max = list[index]; 
+            indmax = index;
+        }
+        if(list[index] < min)
+        {
+            min = list[index];
+            indmin = index;
         }
         index++;
-        
     }
-    return position;
+   Console.WriteLine($"Максимальное число: {max}");
+   Console.WriteLine($"Индекс максимального числа: {indmax}");
+   Console.WriteLine($"Минимально число: {min}");
+   Console.WriteLine($"Индекс минимального числа: {indmin}");
 }
 
-
-int[] massif = new int[10];
-FillArray(massif);
-PrintArray(massif);
-Console.WriteLine();
-
-
-int pos = IndexOff(massif, 5);
-Console.WriteLine(pos);
+int[] array = new int[10];
+FillArray(array);
+FindMaxMin(array);
