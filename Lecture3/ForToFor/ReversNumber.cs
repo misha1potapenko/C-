@@ -8,11 +8,11 @@ for (int i = inter; i > 0; i = (i / 10))
  Console.Write($"{reverse} ");
 
 }
-// if (reverse == inter) 
-// {
-//     Console.WriteLine("Yes");
-// }
-// else 
-// {
-//     Console.WriteLine("No");
-// }
+if (reverse == inter) 
+{
+    Console.WriteLine("Yes");
+}
+else 
+{
+    Console.WriteLine("No");
+}
