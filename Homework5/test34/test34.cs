@@ -32,6 +32,6 @@ void FindPositive(int[] array)
                 if (array[i] % 2 == 0) count++;
             
             }
-        Console.WriteLine($"Количество положительных элементов: {count}");
+        Console.WriteLine($"Количество четных элементов: {count}");
     }
 FindPositive(array);
