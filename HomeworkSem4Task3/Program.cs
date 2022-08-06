@@ -7,7 +7,11 @@
 Console.Write("Введите несколько цифр через запятую: ");
 string ForArray = Console.ReadLine()!;
 int length = ForArray.Length;
+<<<<<<< HE6+++++AD
 Console.WriteLine(length);
+=======
+
+>>>>>>> homework4
 
 int [] Array = ForArray.Split(',').Select(int.Parse).ToArray();
 
