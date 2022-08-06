@@ -9,7 +9,21 @@ int NumbersOfElements = Convert.ToInt32(Console.ReadLine());
 
 int[] array = new int[NumbersOfElements];
 
-for (int i = 0; i < array.Length; i++)
-{
+void FillArray(int[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = new Random().Next(111, 999);
+            }
+    }
 
+FillArray(array);
+
+void PrintArray(int[] newCol)
+{
+   for (int i = 0; i < newCol.Length; i++)
+        {
+            Console.Write($"{newCol[i]}, ");
+        }
 }
+PrintArray(array);
