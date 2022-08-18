@@ -10,6 +10,7 @@
 // 4 9 4 2
 // 7 2 2 6
 // 2 3 4 7
+// Сделал как в примере
 Console.Write("Введите количество строк: ");
 int str = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество столбцов: ");
