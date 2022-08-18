@@ -8,6 +8,7 @@
 // 1 2 4 7
 // 2 3 5 9
 // 2 4 4 8
+
 Console.Write("Введите количество строк: ");
 int str = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество столбцов: ");
@@ -36,7 +37,9 @@ void PrintArray(int[,] array)
             }
     }
 FillArray(array);
+
 PrintArray(array);
+
 Console.WriteLine();
 
 void SelectionSort(int[,] array)
@@ -45,7 +48,7 @@ void SelectionSort(int[,] array)
             {
                 for(int j = 0; j < array.GetLength(1)-1; j++)
                     {
-                        int min = j;
+                        int min = j; 
                         for (int k = j + 1 ; k < array.GetLength(1); k++)
                             { 
                                 if (array[i,k] < array[i,min]) 
