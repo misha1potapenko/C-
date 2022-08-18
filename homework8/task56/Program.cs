@@ -20,7 +20,7 @@ void FillArray(int[,] array)
             {
                 for(int j = 0; j < array.GetLength(1); j++)
                     {
-                        array[i,j] = new Random().Next(1, 20);
+                        array[i,j] = new Random().Next(1, 10);
                     }
             }
     }
@@ -37,35 +37,49 @@ void PrintArray(int[,] array)
     }
 FillArray(array);
 PrintArray(array);
-Console.WriteLine();
-
-void SelectionSort(int[,] array)
+void PrintArray1(int[] newCol)
     {
-        for (int i = 0; i < array.GetLength(0); i++)
+        int count = newCol.Length;
+        int position = 0;
+        while (position < count)
             {
-                for(int j = 0; j < array.GetLength(1)-1; j++)
-                    {
-                        int min = j;
-
-                        for (int k = j + 1 ; k < array.GetLength(1); k++)
-                            {
-                                
-                                if (array[i,k] < array[i,min]) 
-                                    {
-                                        min = k;
-                                    }
-                                    
-
-                            }
-                        //  Console.WriteLine($"{min}, ");
-                        int temp = array[i,j];
-                        array[i,j] = array[i,min];
-                        array[i,min] = temp;
-                    }
-
-
+                 Console.Write($"{newCol[position]}; ");
+                 position++;
             }
     }
 
-SelectionSort(array);
-PrintArray(array);
+void FindMin(int[] array)
+    {
+         int min = 0;
+        for (int i = 0; i < array.Length; i++)
+            { 
+               
+                if (array[i] < array[min]) min = i;
+                
+            }
+        
+        Console.WriteLine($"Строкой с минимальной суммой элементов является {min} строка");
+    }
+
+void FindMinStr(int[,] array)
+    {
+        int[] ForArray = new int[array.GetLength(0)];
+        for (int i = 0; i < array.GetLength(0); i++)
+            {
+                int sumStr = 0;           
+                for(int j = 0; j < array.GetLength(1); j++)
+                    {
+                        sumStr = sumStr + array[i,j];
+
+                    }
+                ForArray[i] = sumStr;
+            }
+        PrintArray1(ForArray);
+        Console.WriteLine();
+        FindMin(ForArray);
+
+
+        
+    }
+
+FindMinStr(array);

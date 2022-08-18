@@ -46,18 +46,13 @@ void SelectionSort(int[,] array)
                 for(int j = 0; j < array.GetLength(1)-1; j++)
                     {
                         int min = j;
-
                         for (int k = j + 1 ; k < array.GetLength(1); k++)
-                            {
-                                
+                            { 
                                 if (array[i,k] < array[i,min]) 
                                     {
                                         min = k;
                                     }
-                                    
-
                             }
-                        //  Console.WriteLine($"{min}, ");
                         int temp = array[i,j];
                         array[i,j] = array[i,min];
                         array[i,min] = temp;
