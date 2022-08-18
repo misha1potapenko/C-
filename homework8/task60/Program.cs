@@ -5,6 +5,7 @@
 // 11 16 15 6
 // 10 9 8 7
 
+
 int str = 4;
 int column = 4;
 int[,] array = new int[str, column];
