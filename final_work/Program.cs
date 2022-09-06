@@ -1,6 +1,9 @@
 ﻿// Написать программу, которая из имеющегося массива сток
 // формирует массив из строк, длина которых меньше либо равна 3 символа.
-string[] firstArray = {"sd1", "awe", "dsf", "s45d", "aw555e", "d5f"};
+
+
+string[] firstArray = {"name", "one", "23", "dad", "finally", "great"};
+
 string[] secondArray = new string[firstArray.Length];
 
 for (int i = 0; i < firstArray.Length; i++)
